@@ -80,12 +80,12 @@ void loop() {
     // oled.print(sens*float(count)*1000/float(screen_refr));
     oled.setScale(4);
     oled.print(result,2);
-    oled.setCursor(64,4);
+    oled.setCursor(0,4);
     oled.setScale(2);
     oled.print("uR/hr");
-    oled.setCursor(0,4);
+    oled.setCursor(80,4);
     oled.print((5.0*analogRead(bat)/1024.0));
-    oled.rect(2, 57, round(1.2*(68.96*((5.0*analogRead(bat)/1024.0)-2.75))-2), 61, 1);
+    oled.rect(2, 57, round(1.2*(77.5*((5.0*analogRead(bat)/1024.0)-2.75))-2), 61, 1);
     count = 0;
     do {
       timer += screen_refr;
