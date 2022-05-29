@@ -22,7 +22,7 @@ unsigned long last_time = 0;       // время последнего импул
 float result;
 float k = 0.1;
 GyverOLED<SSD1306_128x64, OLED_NO_BUFFER> oled;
-// GFilterRA analog0sdsd;  
+// GFilterRA analog0;  
 
 float expRunningAverageAdaptive(float newVal) {
    static float filVal = 0;
