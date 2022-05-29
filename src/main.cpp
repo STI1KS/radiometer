@@ -79,10 +79,13 @@ void loop() {
     oled.home();        // курсор в 0,0
     // oled.print(sens*float(count)*1000/float(screen_refr));
     oled.setScale(4);
-    oled.print(result);
+    oled.print(result,2);
+    oled.setCursor(64,4);
+    oled.setScale(2);
+    oled.print("uR/hr");
     oled.setCursor(0,4);
-    oled.setScale(3);
-    oled.rect(2, 57, round(1.2*(66.66*((5.0*analogRead(bat)/1024.0)-2.75))-2), 61, 1);
+    oled.print((5.0*analogRead(bat)/1024.0));
+    oled.rect(2, 57, round(1.2*(68.96*((5.0*analogRead(bat)/1024.0)-2.75))-2), 61, 1);
     count = 0;
     do {
       timer += screen_refr;
